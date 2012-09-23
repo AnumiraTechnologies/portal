@@ -1,0 +1,41 @@
+<div id="wrapper">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+<ul>
+<li class="rtline"><%= link_to "Overview", :controller => "overview" %></li>
+<li class="rtline"><%= link_to "Services", :controller => "services" %></li>
+<li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
+<li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
+<li><%= link_to "Contact us", :controller => "contact" %></li>
+</ul>
+</nav>
+</header>
+<section id="slideholder">
+<ul id="slider1">
+<li><%= image_tag("sliderimages/slidcloud.png", :alt => "Cloud applications") %></li>
+<li><%= image_tag("sliderimages/slidconsulting.png", :alt => "Consulting") %></li>
+<li><%= image_tag("sliderimages/slidappdev.png", :alt => "Application Development") %></li>
+</ul>
+</section>
+<section id="tabcontents">
+<div class="productstab">
+<h2>Products / Services</h2>
+<article>
+<ul>
+<li>Project otto, a social activity built using RoR, to connect social sharing space.</li>
+<li>We are working on a SaaS based Human resource application integrated with social networking platforms.</li>
+</ul></article>
+</div>
+<div class="blogtab">
+<h2>Latest from the blog</h2>
+<article><% @post.each do |post| %>
+<p><%= link_to truncate(raw(post.body), :length => 110, :separator => ' '), post_path(post) %></p>
+<% end %>
+</div>
+<div class="twittertab">
+<h2>Twitter updates</h2>
+<article><div class="tweet"></div></article>
+</div>
+<div style="clear:both"></div>
+</section>

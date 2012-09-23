@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Ubuntu Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Ubuntu Condensed'), local('UbuntuCondensed-Regular'), url('http://themes.googleusercontent.com/static/fonts/ubuntucondensed/v2/DBCt-NXN57MTAFjitYxdrFzqCfRpIA3W6ypxnPISCPA.woff') format('woff');
+}

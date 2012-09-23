@@ -1,0 +1,29 @@
+<% title "Company blog" %>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+<ul>
+<li class="rtline"><%= link_to "Overview", :controller => "overview" %></li>
+<li class="rtline"><%= link_to "Services", :controller => "services" %></li>
+<li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
+<li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
+<li><%= link_to "Contact us", :controller => "contact" %></li>
+</ul>
+</nav>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>User details</h1>
+<article>
+<section class="blogcontents">
+
+  <% @users.each do |user| %>
+      <%= link_to user.email, user %> signed up <%= user.created_at.to_date %>
+    <%= user.name %>
+  <% end %>
+
+</section>
+</article>
+</div>
+</section>

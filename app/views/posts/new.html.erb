@@ -1,0 +1,35 @@
+<% title "Company blog" %>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+<ul>
+<li class="rtline"><%= link_to "Overview", :controller => "overview" %></li>
+<li class="rtline"><%= link_to "Services", :controller => "services" %></li>
+<li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
+<li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
+<li><%= link_to "Contact us", :controller => "contact" %></li>
+</ul>
+</nav>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>New post</h1>
+<article>
+<section class="blogcontents">
+
+<%= render 'form' %>
+
+<%= link_to 'Back', posts_path %>
+</section>
+</article>
+</div>
+</section>

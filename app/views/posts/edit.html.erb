@@ -1,0 +1,18 @@
+<% title "Company blog" %>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>Editing post</h1>
+<article>
+<section class="blogcontents">
+<%= render 'form' %>
+
+<%= link_to 'Show', @post %> |
+<%= link_to 'Back', posts_path %>
+</section>
+</article>
+</div>
+</section>

@@ -1,0 +1,70 @@
+
+<% title "Company blog" %>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+<ul>
+<li class="rtline"><%= link_to "Overview", :controller => "overview" %></li>
+<li class="rtline"><%= link_to "Services", :controller => "services" %></li>
+<li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
+<li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
+<li><%= link_to "Contact us", :controller => "contact" %></li>
+</ul>
+</nav>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>Blog</h1>
+<article>
+<section class="blogcontents">
+<p id="notice"><%= notice %></p>
+	<h2><%= @post.title %></h2>
+	<div class="post"><%= raw @post.body %></div>
+	<div class="postfooter">
+	<div class="controls"><% if user_signed_in? %><%= link_to 'Edit', edit_post_path(@post) %> | <% end %> <%= link_to 'Back', posts_path %></div>
+	<div class="dtauthor"><%= @post.created_at.strftime("%B %d, %Y") %>	</div>
+	<div class="twitterapi"><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="anumiratech">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+	<div class="fbapi"><div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div></div>
+	</div>
+</section>
+</article>
+</div>
+<aside class="colrights">
+<div class="sideshw"><%= image_tag("components/blog/sidesep.png", :alt => "Seperatorshadow") %></div>
+<div class="sidecont">
+<section class="search"><br />
+<%= render 'search' %>
+</section>
+<section class="archive">
+<h3>Archive</h3>
+<div class="archivelist">
+<% @posts_by_month.each do |monthname, posts| %>
+	<p class="month-archive"><%= monthname %></p>
+<ul>
+<% posts.each do |post| %>
+<li><%= link_to post.title, :action => 'show', :id => post %></li>
+<% end %>
+</ul>
+<% end %>	
+</div>
+</section>
+<section class="recentposts">
+<h3>Recent posts</h3>
+<div class="recentpostslist">
+<ul><% @recentlist.each do |post| %><li><%= link_to post.title, post_path(post) %></li><% end %></ul>
+	
+</div>	
+</section>
+</div>
+</aside>
+</section>

@@ -1,0 +1,103 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ */
+
+body{margin:0; padding:0; background:#000; font-family: 'Ubuntu Condensed', sans-serif;}
+#wrapper{padding:0 auto; margin:0 auto; width:1100px; background:url(background/anubk.jpg) 0 0 no-repeat;}
+#wrappersub{padding:0 auto; margin:0 auto; width:1100px;background-color:#353535;}
+
+a{color:#666; text-decoration:none;}
+a:hover{color:#000; text-decoration:underline;}
+header, footer, aside, section, article, nav{display: block;}
+p::selection {background:#000;color:#fff;}
+p::-moz-selection {background: #000;color:#fff;}
+
+/* Header Contents */
+header{padding-top:45px; padding-left:65px; padding-right:15px; overflow:auto;}
+h1.logo{background:url(logo.png) no-repeat 0 0; text-indent:-600px; height: 55px; float:left; width:200px;}
+
+header nav{overflow:auto; float:right; width:500px;}
+header nav ul li{padding-right:10px; padding-left:10px; display:inline;}
+header nav ul li a{color:#fff; text-decoration:none;}
+header nav ul li a:hover{color:#000; background:#fff; text-decoration:none;}
+li.rtline{border-right:1px solid #fff;}
+
+/* Slider */
+section#slideholder{overflow:auto; padding-top:10px; padding-left:105px; padding-right:10px;}
+/*previous next button*/
+.bx-prev {position:absolute;top:40%;left:-50px;width: 23px;height: 35px; text-indent:-9999px;background:url(sliderimages/arwleft.png) no-repeat 0 0px;}
+.bx-next {position:absolute;top:40%;right:-15px;z-index:999;width: 23px;height: 35px;text-indent: -999999px;background:url(sliderimages/arwright.png) no-repeat 0 0px;}
+
+/* Tab contents */
+section#tabcontents{background-color:#fff; color:#333; margin-top:50px; padding-left:55px; padding-bottom:45px; overflow:auto;}
+section#tabcontents div.productstab{float:left; width:320px; padding-right:15px;}
+section#tabcontents div.blogtab{float:left; width:320px; padding-right:15px;}
+section#tabcontents div.twittertab{float:left;width:320px;}
+
+/* Subpage content */
+section#contents{background-color:#fff;color:#000; margin-top:25px; padding-left:65px; overflow:auto; padding-bottom:35px;}
+section#contents div.colleft{float:left; width:700px;}
+section#contents div.colleft h1{font-size:45px; text-shadow:0px 1px 1px #ccc;}
+section#contents div.colleft article{overflow:auto; width:650px;}
+div.border{border-bottom:1px solid #ccc;}
+section#contents div.colleft article p.title{font-size:25px; color:#000; text-shadow:0px 1px 1px #ccc; text-align:justify;}
+div.border{border-bottom:1px solid #ccc; overflow:auto;}
+section#contents div.colleft article div.content1{float:left; padding-right:15px; width:300px;}
+section#contents div.colleft article div.content1 p{font-size:14px; color:#666;}
+section#contents div.colleft article div.content2{float:left; padding-left:5px; width:300px;}
+section#contents div.colleft article div.content2 p{font-size:14px; color:#666;}
+
+section#contents aside.colrights{float:left;width:300px; margin-top:100px; overflow:auto;}
+section#contents aside.colrights div.sideshw{float:left; width:24px;}
+section#contents aside.colrights div.sidecont{float:right; width:250px;}
+section#contents aside.colrights div.sidecont ul li{list-style:katakana, decimal, square !important;}
+
+/*Blog section */
+section#contents div.colleft article section.blogcontents{padding-left:145px; width:500px; line-height:150%;}
+section#contents div.colleft article section.blogcontents h2 a{color:#666; text-decoration:none;}
+section#contents div.colleft article section.blogcontents div.postfooter{padding-top:15px; font-size:12px; color:#666; overflow:auto}
+section#contents div.colleft article section.blogcontents div.postfooter div.dtauthor{float:left;width:250px;}
+section#contents div.colleft article section.blogcontents div.postfooter div.twitterapi{float:left;width:100px;}
+section#contents div.colleft article section.blogcontents div.postfooter div.fbapi{float:left;width:100px;}
+
+section#contents aside.colrights section{border-bottom:1px solid #ccc;}
+
+/*Careers section */
+section#contents div.colleft article div.content2{float:left; padding-left:5px; width:300px;}
+section#contents div.colleft article div.content2 section.perks{padding: 16px 20px; background-color: #eee; -webkit-border-radius: 10px; -moz-border-radius: 10px;border-radius: 10px; margin: 25px 0 20px 0;}
+
+/* Search */
+/* #search input[type="text"] {background: url(search-white.png) no-repeat 10px 6px #fcfcfc; border: 1px solid #d1d1d1; font: bold 12px Arial,Helvetica,Sans-serif; width: 100px; padding: 6px 15px 6px 35px; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px; text-shadow: 0 2px 3px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset; -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15) inset; -webkit-transition: all 0.7s ease 0s; -moz-transition: all 0.7s ease 0s; -o-transition: all 0.7s ease 0s; transition: all 0.7s ease 0s; }
+#search input[type="text"]:focus { width: 175px; } */
+
+#search input[type="text"]{padding: 5px; -webkit-border-radius: 4px;-khtml-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;-webkit-box-shadow: 0 0 1px #ccc; -moz-box-shadow: 0 0 1px #ccc; box-shadow: 0 0 1px #ccc;border: 1px solid #fff;}
+
+/* Admin area */
+section#admincontents{background-color:#fff;color:#000; margin-top:25px; padding-left:65px; overflow:auto;}
+section#admincontents div.colleft{float:left; width:300px;}
+section#admincontents div.colright{float:left; padding-left:15px; width:700px;}
+
+
+section#admincontents nav{padding: 16px 20px; background-color: #eee; -webkit-border-radius: 10px; -moz-border-radius: 10px;border-radius: 10px; margin: 0 0 20px 0;}
+section#admincontents div.colleft nav ul li{list-style:none;}
+
+
+/* Form */
+input, textarea {padding: 5px; -webkit-border-radius: 4px;-khtml-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px;-webkit-box-shadow: 0 0 1px #666; -moz-box-shadow: 0 0 1px #666; box-shadow: 0 0 1px #666; border: 1px solid #fff;}
+
+/* Footer */
+footer{padding-top:5px; background:#fff; padding-left:65px; padding-right:15px; font-size:13px; color:#666; overflow:auto; background:#333;}
+footer div#copyrights{padding-top:25px; float:left; width:400px;}
+footer div#contact{float:right; width:400px;}
+footer div#contact ul li{list-style:none; display:inline;}
+
+.tweet_hashtag{color:#000;}
