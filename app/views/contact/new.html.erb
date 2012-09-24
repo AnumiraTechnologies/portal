@@ -1,0 +1,26 @@
+<% title "Contact us" %>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+<ul>
+<li class="rtline"><%= link_to "Overview", :controller => "overview" %></li>
+<li class="rtline"><%= link_to "Services", :controller => "services" %></li>
+<li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
+<li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
+<li><%= link_to "Contact us", :controller => "contact", :action => "new" %></li>
+</ul>
+</nav>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>Contact us</h1>
+<article>
+<%= render 'contact' %>
+</article>
+</div>
+<aside class="colrights">
+<div class="sideshw"><%= image_tag("components/blog/sidesep.png", :alt => "Seperatorshadow") %></div>
+<div class="sidecont"></div>
+</aside>
+</section>

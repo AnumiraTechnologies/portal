@@ -11,7 +11,19 @@ end
 
 module Anumira
   class Application < Rails::Application
+    config.action_mailer.smtp_settings = {
+    :address              => "smtp.gmail.com",
+    :port                 => 587,
+    :domain               => "anumira.com",
+    :user_name            => "contact@anumira.com",
+    :password             => "something",
+    :authentication       => :plain,
+    :enable_starttls_auto => true
+  }
 
+    config.action_mailer.default_url_options = {
+    :host => "anumira.com"
+  }
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

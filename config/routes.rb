@@ -11,7 +11,8 @@ Anumira::Application.routes.draw do
   resources :home
   resources :services
   resources :jobs
-  resources :contact
+match 'contact' => 'contact#new', :as => 'contact', :via => :get
+match 'contact' => 'contact#create', :as => 'contact', :via => :post
   resources :overview
   resources :admin
   

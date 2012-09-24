@@ -1,0 +1,29 @@
+<%= form_for @message, :url => contact_path do |form| %>
+<% if @message.valid? %>
+  <h6> <%= :notice %></h6>
+<% end %>
+
+
+	<table width="501" height="68" border="0" cellpadding="0" cellspacing="1">
+  <tr>
+    <td><%= form.label :name %></td>
+    <td><%= form.text_field :name %></td>
+  </tr>
+  <tr>
+    <td><%= form.label :email %></td>
+    <td><%= form.text_field :email %></td>
+  </tr>
+  <tr>
+  	<td><%= form.label :subject %></td>
+  	<td><%= form.text_field :subject %></td>
+  </tr>
+  <tr>
+  	<td><%= form.label :message %></td>
+  	<td><%= form.text_area :body %></td>
+  </tr>
+  <tr>
+  	<td></td>
+  	<td><%= form.submit "Send" %></td>
+  </tr>
+</table>
+<% end %>
