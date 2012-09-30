@@ -1,4 +1,4 @@
 //= require jquery
 //= require bxslider
 //= require modernizr
-//= require tinymce
+//= require ckeditor/init

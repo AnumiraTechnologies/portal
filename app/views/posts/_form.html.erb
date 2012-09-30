@@ -1,9 +1,4 @@
-<script type="text/javascript">
-  tinyMCE.init({
-    mode: 'textareas',
-    theme: 'advanced'
-  });
-</script>
+
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -23,10 +18,10 @@
   </div>
   <div class="field">
     <%= f.label :body %><br />
-    <%= f.text_area :body, :class => 'tinymce' %>
+    <%= f.text_area :body, :class => 'ckeditor' %>
   </div>
-  
-
+  	
+	
   <div class="actions">
     <%= f.submit %>
   </div>

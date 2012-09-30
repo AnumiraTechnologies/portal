@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.6'
-gem 'mysql2'
+gem "heroku"
+#gem 'mysql2'
+group :development, :test do
+  gem 'sqlite3'
+end
+group :production do
+  gem 'pg'
+end
 gem 'devise'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,4 +23,7 @@ gem 'modernizr-rails'
 gem 'html5shiv-rails'
 gem 'will_paginate', '~> 3.0'
 gem 'has_permalink'
-gem 'tinymce-rails'
+gem "ckeditor", "3.7.1"
+group :production do
+  gem 'thin'
+end

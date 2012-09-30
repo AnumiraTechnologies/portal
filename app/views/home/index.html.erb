@@ -30,7 +30,7 @@
 <div class="blogtab">
 <h2>Latest from the blog</h2>
 <article><% @post.each do |post| %>
-<p><%= link_to truncate(raw(post.body), :length => 110, :separator => ' '), post_path(post) %></p>
+<p><%= link_to truncate(raw(post.title), :length => 110, :separator => ' '), post_path(post) %></p>
 <% end %>
 </div>
 <div class="twittertab">

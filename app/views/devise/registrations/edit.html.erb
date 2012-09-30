@@ -1,3 +1,16 @@
+<% title "Edit User page " %>
+<div id="wrappersub">
+<header>
+<a href="/"><h1 class="logo">Anumira Technologies</h1></a>
+<nav>
+
+</nav>
+</header>
+<section id="contents">
+<div class="colleft">
+<h1>User details</h1>
+<article>
+<section class="blogcontents">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
@@ -27,3 +40,7 @@
 <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %>.</p>
 
 <%= link_to "Back", :back %>
+</section>
+</article>
+</div>
+</section>
