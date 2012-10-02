@@ -29,7 +29,7 @@
 	<h2><%= link_to post.title, :action => 'show', :id => post %></h2>
 	<div class="post"><%= raw post.body %></div>
 	<div class="postfooter">
-	<div class="dtauthor"> <%= post.user.name %>  on <%= post.created_at.strftime("%B %d, %Y") %> </div>
+	<div class="dtauthor">  <%= post.created_at.strftime("%B %d, %Y") %> </div>
 	<div class="twitterapi"><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="anumiratech">Tweet</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
 	<div class="fbapi"><div class="fb-like" data-send="false" data-layout="button_count" data-show-faces="false"></div></div>
