@@ -1,0 +1,27 @@
+<%= form_for message do |f| %>
+	<% if message.errors.any? %>
+	<ul>
+		<% message.errors.full_messages.each do |msg| %>
+		<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+	
+	<div style="display: none;">
+    	<%= f.label :nickname %><br/>
+    	<%= f.text_field :nickname %>
+  	</div>
+	<label>
+		<span>Full name:</span>
+		<%= f.text_field :name, :class => 'input_text' %>
+	</label>
+	<label>
+		<span>Email:</span>
+		<%= f.text_field :email, :class => 'input_text' %>
+	</label>
+	<label>
+		<span>Message:</span>
+		<%= f.text_area :message, :class => 'message' %>
+		<%= f.submit "Send", :class => 'button' %>
+	</label>
+<% end %>

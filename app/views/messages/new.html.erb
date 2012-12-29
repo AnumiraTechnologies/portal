@@ -1,4 +1,3 @@
-<% title "Company blog" %>
 <div id="wrappersub">
 <header>
 <a href="/"><h1 class="logo">Anumira Technologies</h1></a>
@@ -9,21 +8,25 @@
 <li class="rtline"><%= link_to "Blog", :controller => "posts" %></li>
 <li class="rtline"><%= link_to "Join Anumira", :controller => "jobs" %></li>
 <li><%= link_to "Contact us", :controller => "contact" %></li>
+
+<li></li>
 </ul>
 </nav>
 </header>
 <section id="contents">
 <div class="colleft">
-<h1>User details</h1>
-<article>
-<section class="blogcontents">
-
-  <% @users.each do |user| %>
-      <%= link_to user.email, user %> signed up <%= user.created_at.to_date %>
-    <%= user.name %>
-  <% end %>
-
-</section>
-</article>
+<h1>Contact us</h1>
+<div class="box"><%= render 'form', :message => @message %></div>
 </div>
+<aside class="colrights">
+<div class="sideshw"><%= image_tag("components/blog/sidesep.png", :alt => "Seperatorshadow") %></div>
+<div class="sidecont">
+	<h3>Email us:</h3>
+  <p>Please find free to contact us at info@anumira.com</p>
+  <p>Also drop in a message in the  form given.</p>
+  <h3>Phone</h3>
+  <p>You can also call us directly at +919176000987 (India)</p>
+<p>Week days: 09:00 AM - 20:00 PM</p>
+</div>
+</aside>
 </section>

@@ -9,6 +9,8 @@ end
 group :production do
   gem 'pg'
 end
+
+gem 'pony'
 gem 'devise'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
