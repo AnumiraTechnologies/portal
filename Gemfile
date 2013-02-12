@@ -9,7 +9,7 @@ end
 group :production do
   gem 'pg'
 end
-
+gem 'json', '1.7.7'
 gem 'pony'
 gem 'devise'
 group :assets do
